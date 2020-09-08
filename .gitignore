@@ -1,8 +1,3 @@
 # These will not be uploaded to the repository
 node_modules
-__MACOSX/._img
-__MACOSX/img/._.DS_Store
-__MACOSX/img/._alberto.png
-__MACOSX/img/._buffet.png
-__MACOSX/img/._logo.png
-__MACOSX/img/._uthappizza.png
+dist
