@@ -31,7 +31,7 @@
                 </ul>
             </div>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal">
+                <a id="login" >
                 <span class="fa fa-sign-in"></span> Login</a>
             </span>
         </div>
@@ -43,7 +43,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button id="closeLoginModal" type="button" class="close">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button id="closeLoginModal" type="button" class="btn btn-secondary btn-sm ml-auto">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
@@ -80,7 +80,7 @@
             <div class="modal-content">
                 <div class="modal-header ">
                     <h3 class="">Reserve a Table</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button id="closeFormModal" type="button" class="close" >&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="card-body">
@@ -141,7 +141,7 @@
     
                                 <div class="form-group row">
                                     <label for="DateTime" class="col-12 col-md-3 pl-0 col-form-label">Date and Time</label>
-                                    <div class="col col-12 col-sm-4">
+                                    <div class="col col-12 pl-0 col-sm-4">
                                         <input type="date" class="form-control" placeholder="Date">
                                     </div>
                                     <div class="col col-12 col-sm-4">
@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="offset-md-3 col-md-10">
-                                        <button type="submit" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+                                        <button id="closeFormModal" type="button" class="btn btn-secondary">Cancel</button>
                                         <button type="submit" class="btn btn-primary">Reserve</button>
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#formModal">Reserve Table</a>
+                    <a id="ReserveTable" role="button" class="btn btn-block nav-link btn-warning" >Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -359,6 +359,18 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
+        $("#ReserveTable").click(() => {
+            $("#formModal").modal("toggle");
+        });
+        $("#login").click(() => {
+            $("#loginModal").modal("toggle");
+        });
+        $("#closeLoginModal").click(() => {
+            $("#loginModal").modal("toggle");
+        });
+        $("#closeFormModal").click(() => {
+            $("#formModal").modal("toggle");
+        });
     </script>
 </body>
 
